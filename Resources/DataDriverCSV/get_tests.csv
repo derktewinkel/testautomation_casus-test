@@ -1,0 +1,20 @@
+***Test Cases***;[Tags];[Documentation];${username};${password};${expected_status};${expected_message};${endpoint};${params};
+Get Tests - Validate Token Open;get_tests;;;;401;Missing Authorization Header;/v1/proxy/tokens;
+Get Tests - Validate Token User;get_tests;;testuser;user;200;you saw me!;/v1/proxy/tokens;
+Get Tests - Validate Token Admin;get_tests;;testadmin;admin;200;you saw me!;/v1/proxy/tokens;
+Get Tests - Validate Token As Admin Open;get_tests;;;;401;Missing Authorization Header;/v1/proxy/tokens/admin;
+Get Tests - Validate Token As Admin User;get_tests;;testuser;user;403;Forbidden for this user;/v1/proxy/tokens/admin;
+Get Tests - Validate Token As Admin Admin;get_tests;;testadmin;admin;200;You are a super cool admin;/v1/proxy/tokens/admin;
+Get Tests - Get All Movies Open;get_tests;;;;200;description;/v1/proxy/movies;
+Get Tests - Get All Movies User;get_tests;;testuser;user;200;description;/v1/proxy/movies;
+Get Tests - Get All Movies Admin;get_tests;;testadmin;admin;200;description;/v1/proxy/movies;
+Get Tests - Get All Movies As Admin Open;get_tests;;;;401;Missing Authorization Header;/v1/proxy/movies/admin;
+Get Tests - Get All Movies As Admin User;get_tests;;testuser;user;403;Forbidden for this user;/v1/proxy/movies/admin;
+Get Tests - Get All Movies As Admin Admin;get_tests;;testadmin;admin;200;You are a super cool admin;/v1/proxy/movies/admin;
+Get Tests - Search Movie By Name Open;get_tests;;;;401;Missing Authorization Header;/v1/proxy/movies/searches;query=A Million Ways to Die in the West
+Get Tests - Search Movie By Name User;get_tests;;testuser;user;200;A Million Ways to Die in the West;/v1/proxy/movies/searches;query=A Million Ways to Die in the West
+Get Tests - Search Movie By Name Admin;get_tests;;testadmin;admin;200;A Million Ways to Die in the West;/v1/proxy/movies/searches;query=A Million Ways to Die in the West
+Get Tests - Search New Movie By Name Admin;get_tests, search_new;;testadmin;admin;200;some title;/v1/proxy/movies/searches;query=some title
+Get Tests - Get All Users Open;get_tests;;;;401;Missing Authorization Header;/v1/proxy/users;
+Get Tests - Get All Users User;get_tests;;testuser;user;200;allUsers;/v1/proxy/users;
+Get Tests - Get All Users Admin;get_tests;;testadmin;admin;200;allUsers;/v1/proxy/users;

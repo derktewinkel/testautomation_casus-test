@@ -1,0 +1,4 @@
+***Test Cases***;[Tags];[Documentation];${username};${password};${expected_status};${expected_message};${endpoint};${data};
+Post Tests - Create New movie Open;post_tests;;;;401;Missing Authorization Header;/v1/proxy/movies;imdb=some new name,title=some title,type=movie,year=${2021}
+Post Tests - Create New movie User;post_tests;;testuser;user;403;Forbidden for this user;/v1/proxy/movies;imdb=some new name,title=some title,type=movie,year=${2021}
+Post Tests - Create New movie Admin;post_tests, create_new;;testadmin;admin;201;has been inserted;/v1/proxy/movies;imdb=some new name,title=some title,type=movie,year=${2021}

@@ -1,0 +1,9 @@
+# ./Resources/pythonlib/RunRobot.py -A createMovie.txt
+
+--suite Tests_DataDriver
+--include post_tests_dd
+--include create_new
+
+--suite Tests_DataDriver
+--include get_tests_dd
+--include search_new

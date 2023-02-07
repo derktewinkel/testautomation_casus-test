@@ -1,0 +1,6 @@
+# ./Resources/pythonlib/RunRobot.py -A runAll.txt
+
+--suite Tests
+--include proxy_open
+--include proxy_user
+--include proxy_admin

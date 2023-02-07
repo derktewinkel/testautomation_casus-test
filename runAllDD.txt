@@ -1,0 +1,10 @@
+# ./Resources/pythonlib/RunRobot.py -A runAllDD.txt
+
+--suite Tests
+--include post_tests_dd
+--include post_tests
+
+--suite Tests
+--include get_tests_dd
+--include get_tests
+

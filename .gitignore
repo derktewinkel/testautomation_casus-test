@@ -1,0 +1,6 @@
+.idea/
+venv/
+Results/*.xml
+Results/*.html
+Results/original/*.xml
+Results/original/*.html
