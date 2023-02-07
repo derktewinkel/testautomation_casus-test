@@ -71,18 +71,9 @@ def run_rebot():
                      + xml_output_files, exit=False)
 
 
-def move_files():
-
-    all_files = [f for f in listdir(original_dir) if isfile(join(original_dir, f))]
-
-    for file in all_files:
-        new_path = output_dir + file
-        file_path = original_dir + file
-        shutil.move(file_path, new_path)
-
-
 def empty_original_dir():
-    all_files = [join(original_dir, f) for f in listdir(original_dir) if isfile(join(original_dir, f))]
+    all_files = [join(original_dir, f) for f in listdir(original_dir) if isfile(join(original_dir, f))
+                 and 'gitkeep' not in f]
     for file in all_files:
         remove(file)
 
