@@ -1,6 +1,6 @@
 *** Settings ***
 Library     ../Resources/pythonlib/GetBearerToken.py
-            ...    endpoint=http://localhost:8080/v1/proxy/tokens/
+            ...    endpoint=${host}/v1/proxy/tokens/
 
 Library     RequestsLibrary
 Library     Collections

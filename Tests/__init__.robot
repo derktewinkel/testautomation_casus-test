@@ -12,3 +12,6 @@ Run INIT
     ${project_dir}          ${x}    Split Path      ${CURDIR}
     Set Global Variable     ${project_dir}
 
+    Import Variables        ${project_dir}/Variables/variables.py
+    Set Global Variable     ${host}
+
