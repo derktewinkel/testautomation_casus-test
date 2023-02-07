@@ -4,3 +4,4 @@ Results/*.xml
 Results/*.html
 Results/original/*.xml
 Results/original/*.html
+__pycache__
